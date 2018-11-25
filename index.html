@@ -8,9 +8,11 @@
 <body>
   <a-scene>
     <a-assets>
-      <a-asset id="drone" src="./models/busterDrone.gltf"></a-asset>
+      <a-asset id="girl" src="./models/girl-model/Sara_20110310.gltf"></a-asset>
     </a-assets>
-    <a-entity gltf-model="#drone" scale="1 1 1" position="-3 1 -4" id="drone" animation-mixer></a-entity>
+    <a-entity gltf-model="#girl" scale="0.01 0.01 0.01" position="-3 1 -4" id="girl">
+      <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+    </a-entity>
     <a-entity position="0 0 -3" rotation="0 0 0">
       <a-torus-knot position="-4.5 1 -4" radius="1" radius-tubular="0.1" color="aqua">
         <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
