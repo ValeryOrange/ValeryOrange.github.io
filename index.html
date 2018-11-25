@@ -1,4 +1,4 @@
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
 <!--
     aframe-extras loaders is needed in order to add glTF models (And a whole lot of other model formats) into your AR Project.
@@ -33,11 +33,6 @@
   </a-scene> -->
 
     <a-scene>
-      <!--
-          glTF 2.0 Model - busterDrone.gltf
-          Using the default hiro marker (Get it below)
-          https://github.com/akashkuttappa/armodels/raw/master/markers/hiro.jpg
-        -->
       <a-entity id="drone" position="0 0 0" scale="1 1 1" gltf-model-next="src: url(models/busterDrone.gltf);" animation-mixer></a-entity>
     </a-scene>
 </body>
