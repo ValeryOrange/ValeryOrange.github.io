@@ -6,29 +6,30 @@
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
 </head>
 
-<body>
-  <a-scene embedded artoolkit="sourceType: webcam;">
+<body style="margin : 0px; overflow: hidden;">
+  <a-scene embedded arjs>
     <a-assets>
       <a-asset id="girl" src="./models/girl-model/Sara_20110310.gltf"></a-asset>
     </a-assets>
-    <a-entity gltf-model="#girl" scale="1 1 1" position="-1 0 -4" id="girl">
-      <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
-    </a-entity>
-    <a-entity position="0 0 -3" rotation="0 0 0">
-      <a-torus-knot position="-4.5 1 -4" radius="1" radius-tubular="0.1" color="aqua">
+    <a-marker preset="hiro">
+      <a-entity gltf-model="#girl" scale="1 1 1" position="-1 0 -4" id="girl">
         <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
-      </a-torus-knot>
-      <a-box position="-1 0.5 -3" rotation="0 90 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
-        <a-ring position="-0.5 2 0" radius="0.5" width="1" color="#EF2D5E"></a-ring>
-      </a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" rotation="90 0 0"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-      <a-dodecahedron color="#FF926B" radius="1" position="5 1 -4" rotation="30 20 0"></a-dodecahedron>
-      <a-text position="0 3 0" color="red" value="Hello!" align="center"></a-text>
-    </a-entity>
-    <a-marker preset="hiro"></a-marker>
+      </a-entity>
+      <a-entity position="0 0 -3" rotation="0 0 0">
+        <a-torus-knot position="-4.5 1 -4" radius="1" radius-tubular="0.1" color="aqua">
+          <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+        </a-torus-knot>
+        <a-box position="-1 0.5 -3" rotation="0 90 0" color="#4CC3D9"></a-box>
+        <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E">
+          <a-ring position="-0.5 2 0" radius="0.5" width="1" color="#EF2D5E"></a-ring>
+        </a-sphere>
+        <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" rotation="90 0 0"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+        <a-dodecahedron color="#FF926B" radius="1" position="5 1 -4" rotation="30 20 0"></a-dodecahedron>
+        <a-text position="0 3 0" color="red" value="Hello!" align="center"></a-text>
+      </a-entity>
+    </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 </body>
