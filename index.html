@@ -2,10 +2,16 @@
 
 <head>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src=”<script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>"> </script>
+  <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/cfe5f316/dist/aframe-extras.js"></script>
 </head>
 
 <body>
   <a-scene>
+    <a-assets>
+      <a-asset id="drone" src="./models/busterDrone.gltf"></a-asset>
+    </a-assets>
+    <a-entity gltf-model="#drone" scale="1 1 1" position="-3 1 -4" id="drone" animation-mixer></a-entity>
     <a-entity position="0 0 -3" rotation="0 0 0">
       <a-torus-knot position="-4.5 1 -4" radius="1" radius-tubular="0.1" color="aqua">
         <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
