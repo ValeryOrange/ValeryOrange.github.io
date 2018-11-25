@@ -13,22 +13,33 @@
 -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
-  <a-scene embedded artoolkit='sourceType: webcam;'>
+  <!-- <a-scene embedded artoolkit='sourceType: webcam;'> -->
     <!--
       glTF 2.0 Model - busterDrone.gltf
       Using the default hiro marker (Get it below)
       https://github.com/akashkuttappa/armodels/raw/master/markers/hiro.jpg
     -->
-    <a-marker preset='hiro'>
+    <!-- <a-marker preset='hiro'>
       <a-entity
       id="drone"
       position="0 0 0"
-      scale="0.01 0.01 0.01"
-      gltf-model-next="src: url(./models/busterDrone.gltf);"
+      scale="1 1 1"
+      gltf-model-next="src: url(models/busterDrone.gltf);"
       animation-mixer>
       </a-entity>
-    </a-marker>
+    </a-marker> -->
     
-    <a-entity camera></a-entity>
-  </a-scene>
+    <!-- <a-entity camera></a-entity>
+  </a-scene> -->
+
+    <a-scene embedded artoolkit='sourceType: webcam;'>
+      <!--
+          glTF 2.0 Model - busterDrone.gltf
+          Using the default hiro marker (Get it below)
+          https://github.com/akashkuttappa/armodels/raw/master/markers/hiro.jpg
+        -->
+      <a-entity id="drone" position="0 0 0" scale="1 1 1" gltf-model-next="src: url(models/busterDrone.gltf);"
+        animation-mixer>
+      </a-entity>
+    </a-scene>
 </body>
